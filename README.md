@@ -3,6 +3,15 @@
 ## This is a public repo for my Machine Learning Class, CS4375.003. 
 
 
+| Assignment | Link to Code | Link to PDF
+| --- | --- |
+| `Portfolio Set up` | | Here is a [PDF](https://github.com/rpatangay00/MachineLearningClass/blob/9c957528a5faf51253b72e14173e4f3ecccae792/Overview_of_ML.pdf) to my pdf. |
+
+| `git diff` | Show file differences that **haven't been** staged |
+
+
+
+
 ### Portfolio Assignment (Getting Started)
 
 Here is a [link](https://github.com/rpatangay00/MachineLearningClass/blob/9c957528a5faf51253b72e14173e4f3ecccae792/Overview_of_ML.pdf) to my pdf.
