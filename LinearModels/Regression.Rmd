@@ -1,0 +1,208 @@
+---
+title: "Regression"
+author: "Rikita Patangay"
+date: "2022-09-25"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro to Linear Regression
+
+In linear regression the data will consist of predictor values (x) and target values (y). To find the relationship between x and y we will use linear regression. This relationship can be defined using parameters such as w and b. Regression models a target prediction value for the provided data, based on independent variables. 
+
+Strengths:
+- It is a relatively simple algorithm.
+- Efficient when the data follows a linear pattern.
+- Has low variance.
+
+Weaknesses:
+- High bias because it assumes a linear shape to the data.
+
+
+## Read in Dataset: Weather Data
+
+Using read.csv to read in the file and put the data set in the variable (df).
+
+```{r}
+df <- read.csv("WeatherData.csv")
+str(df)
+```
+
+
+
+
+## a.) Split data 80/20
+
+Here I am dividing the data in training and test sets. This works by randomly sampling the data using the sample() function. This is an 80/20 split.
+
+```{r}
+set.seed(1234)
+i <- sample(1:nrow(df), .80*nrow(df), replace=FALSE)
+train <- df[i,]
+test <- df[-i,]
+```
+
+
+
+
+## b.) 5 Functions
+These are 5 pretty simple functions used for data exploration.
+
+head() - gives some of the start of the data sample
+
+tail() - gives some of the end of the data sample 
+
+nrow() - gives number of rows in the sample
+
+ncol() - gives number of columns in the sample\
+
+summary() - gives a brief summary of values associated with the data.
+
+```{r}
+head(train)
+```
+```{r}
+tail(train)
+```
+```{r}
+nrow(train)
+```
+```{r}
+ncol(train)
+```
+```{r}
+summary(train)
+```
+
+
+
+## c.) 2 Informative Graphs
+These are two infromative graphs. The first one is a histogram and the second is scatterplot.
+
+```{r}
+hist(train$Rel.Hum_., breaks=12, col="red")
+```
+```{r}
+attach(train)
+plot(Rel.Hum_., Temp_C, main="Scatterplot of Relative Humidity",
+   xlab="Relative Humidity ", ylab="Temperature in Celsius ", pch=19)
+```
+
+
+
+
+## d.) Build a Simple Regression Model
+
+Here we are building a simple regression model. What we are doing in the model is using the predictor which would be the Rel.Hum. Which is the relative humidity, and our target (y) is Visibility.
+
+
+
+Call:
+lm(formula = Rel.Hum_. ~ Visibility_km, data = train)
+
+Residuals:
+Min:-48.806  1Q: -8.806   Median: 0.427  3Q: 9.194  Max: 50.039 
+         
+
+Coefficients:
+(Estimate Std., Error, t value, Pr(>|t|)<-- corresponds with numbers below)    
+(Intercept)   91.09954,    0.37749,  241.33,   <2e-16 ***
+Visibility_km -0.85173,    0.01241,  -68.65,   <2e-16 ***
+
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 13.09 on 7025 degrees of freedom
+
+Multiple R-squared:  0.4015,	Adjusted R-squared:  0.4014 
+
+F-statistic:  4712 on 1 and 7025 DF
+
+p-value: < 2.2e-16
+
+
+
+
+
+## e.)
+
+
+Could not figure out residual plots :(
+
+
+
+## f.) Multiple Regression Model
+
+Here we are building a multiple regression model. What we are doing in the model is using the predictor which would be the Rel.Hum. Which is the relative humidity, and our target (y) is Temp_C which is temperature in Celsius. We can use the data to compare the levels of Temp/Humidity and how they correlate.
+
+
+
+Call:
+lm(formula = Rel.Hum_. ~ Temp_C, data = train)
+
+Residuals:
+Min: -49.966
+1Q: -12.004
+Median: 0.735
+3Q: 13.177
+Max: 34.096 
+       
+
+Coefficients:
+
+(Estimate Std., Error, t value, Pr(>|t|) <-- corresponds with numbers below)
+
+(Intercept) 70.20387,   0.24781,  283.30,   <2e-16 ***
+
+Temp_C      -0.30494,    0.01695,  -17.99,   <2e-16 ***
+
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 16.55 on 7025 degrees of freedom
+
+Multiple R-squared:  0.04405,	Adjusted R-squared:  0.04391 
+
+F-statistic: 323.7 on 1 and 7025 DF
+p-value: < 2.2e-16
+
+
+
+
+## g.) Third Regression Model
+
+Here we are building another regression model. What we are doing in the model is using the predictor which would be the Wind.Speed_km.h. Which is the Wind Speed in kilometers/hr, and our target (y) is Visibility_km which is the visibility in km We can use the data to compare the levels of Visibility/Wind Speed and how they correlate.
+
+
+
+
+Call:
+lm(formula = Wind.Speed_km.h ~ Visibility_km, data = train)
+
+Residuals:
+
+Min: -15.022  1Q: -6.022  Median: -1.926 3Q: 5.036  Max: 68.036 
+        68.036 
+
+Coefficients:
+
+(Estimate Std., Error, t value, Pr(>|t|)<-- corresponds with numbers below)  
+
+(Intercept)   14.901389,   0.251386,  59.277,   <2e-16 ***
+
+Visibility_km  0.002507,   0.008263,   0.303,    0.762    
+
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+## h.) Comparing the results
+
+I think that the multiple regression is the most accuate because it shows the correlation of multiple variables, and the correlation between them.
+
+## i.) Predict and evaluate
+
+
+

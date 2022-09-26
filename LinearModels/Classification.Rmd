@@ -1,0 +1,129 @@
+---
+title: "Classification"
+author: "Rikita Patangay"
+date: "2022-09-25"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro to Classification
+
+In classification the target will be a binary output  that we classify into one class or the other. There are techniques that allow classification into more than two classes.
+
+Strengths:
+- Separates classes well if they are capable of being seprerated
+- Computationally inexpensive
+- Nice probabilistic output
+
+Weaknesses:
+- It is prone to underfitting.
+
+
+## Read in Dataset: International Matches (FIFA World Cup)
+
+Using read.csv to read in the file and put the data set in the variable (df).
+
+```{r}
+df <- read.csv("international_matches.csv")
+str(df)
+```
+
+
+
+## a.) Split data 80/20
+
+Here I am dividing the data in training and test sets. This works by randomly sampling the data using the sample() function. This is an 80/20 split.
+
+```{r}
+set.seed(1234)
+i <- sample(1:nrow(df), .80*nrow(df), replace=FALSE)
+train <- df[i,]
+test <- df[-i,]
+```
+
+
+
+
+## b.) 5 Functions
+These are 5 pretty simple functions used for data exploration.
+
+head() - gives some of the start of the data sample
+
+tail() - gives some of the end of the data sample 
+
+nrow() - gives number of rows in the sample
+
+ncol() - gives number of columns in the sample
+
+summary() - gives a brief summary of values associated with the data.
+
+```{r}
+head(train)
+```
+```{r}
+tail(train)
+```
+```{r}
+nrow(train)
+```
+```{r}
+ncol(train)
+```
+```{r}
+summary(train)
+```
+
+
+
+## c.) 2 Informative Graphs
+These are two informative graphs. The first one is a histogram and the second is scatterplot.
+
+```{r}
+hist(train$home_team_total_fifa_points, breaks=12, col="red")
+```
+
+```{r}
+attach(train)
+plot(home_team_total_fifa_points, home_team_score, main="Scatterplot of Home Game Fifa Points",
+   xlab="Points ", ylab="Final Score", pch=19)
+```
+
+
+
+## d.) Build a Logistic Regression Model
+
+Here we are building a logistic regression model. What we are doing in the model is using the predictor which would be the Rel.Hum. Which is the relative humidity, and our target (y) is Visibility.
+
+ 
+## e.) Naïve Bayes Model
+
+Based of the Naïve Bayes Model I can say that it is showing me the data of Draws, Losses and Win for randomized teams. (I would copy and paste the data but there is too much and it would get unformatted.)
+
+## f.) Predict and Evaluate
+
+I predict that the values of the home team score and final result score are very close together. Evaluating the data shows that my prediction is accurate.
+
+
+## g.) Strengths and Weaknesses of Naïve Bayes Model and Logistic Regression
+
+Strengths: 
+- Works well with small data sets
+- Easy to implement
+- Easy to interpret
+- Handles high dimensions well
+
+Weaknesses:
+- May be outperformed by other classifiers for larger data sets
+- Guess values in the test set that are not in the training data
+- If the predictors are not independent, the naive assumption that they are may limit the
+performance of the algorithm
+
+## h.) Classification metrics
+
+Accuracy, Recall, Precision, and F1- Score are the metrics that were measured. 
+
