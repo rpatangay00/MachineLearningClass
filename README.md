@@ -17,3 +17,9 @@ Here is a [link](https://github.com/rpatangay00/MachineLearningClass/blob/9c9575
 ## Linear Models Assignment 
 
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/0ce5dae11cede845b3d7ab3e806a9f764114880b/LinearModels/Regression.Rmd) to Regression code.
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/0744dde66b79979b7f3f1a07f404f59037c8b6dc/LinearModels/Classification.Rmd) to Classification code.
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/0744dde66b79979b7f3f1a07f404f59037c8b6dc/LinearModels/Regression.pdf) to Regression PDF.
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/0744dde66b79979b7f3f1a07f404f59037c8b6dc/LinearModels/Classification.pdf) to Classification PDF.
