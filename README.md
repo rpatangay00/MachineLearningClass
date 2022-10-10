@@ -31,3 +31,14 @@ For this assignment I used Datasets off of Kaggle.
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/0394f268286c5f5b37e0aa1a97814aeec7029a58/MLFromScratch/LogReg.cpp) to Logistic Regression code.
 
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/0394f268286c5f5b37e0aa1a97814aeec7029a58/MLFromScratch/MLFromScratch_.pdf) to Logistic Regression PDF.
+
+##Searching for Similiarity Assignment 
+
+[Link](https://github.com/BridgetteBXP13/CS-4375.003---Intoduction-to-Machine-Learning/tree/main/Searching%20for%20Similarity) to shared GitHub repo for all work.
+
+[Link](https://github.com/BridgetteBXP13/CS-4375.003---Intoduction-to-Machine-Learning/blob/0713ef96ab40c07d92351759ac887dab60129a38/Searching%20for%20Similarity/Dimensionality_Reduction.Rmd)to my part of the assignment.
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/139953259222ee2639c03d8ea0b99a9f2852aa3a/SearchingForSimiliarity/Searching%20for%20Similarity_NarrativeDoc%20(2).pdf)to Narrative Document.
+
+
+
