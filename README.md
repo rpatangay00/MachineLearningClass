@@ -25,3 +25,9 @@ For this assignment I used Datasets off of Kaggle.
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/0744dde66b79979b7f3f1a07f404f59037c8b6dc/LinearModels/Regression.pdf) to Regression PDF.
 
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/0744dde66b79979b7f3f1a07f404f59037c8b6dc/LinearModels/Classification.pdf) to Classification PDF.
+
+## ML From Scratch Assignment 
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/0394f268286c5f5b37e0aa1a97814aeec7029a58/MLFromScratch/LogReg.cpp) to Logistic Regression code.
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/0394f268286c5f5b37e0aa1a97814aeec7029a58/MLFromScratch/MLFromScratch_.pdf) to Logistic Regression PDF.
