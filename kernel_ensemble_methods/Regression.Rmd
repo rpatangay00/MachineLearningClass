@@ -1,0 +1,70 @@
+---
+title: "Regression"
+output: pdf_document
+date: "2022-10-20"
+---
+# **Regression on Diamonds Dataset**
+
+For my dataset I used "diamonds" from the tidyverse library. It has over 50000 observations and the data is useful for data analysis.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(e1071)
+library(MASS)
+library(tidyverse)
+library(ggplot2)
+```
+
+# Reading in the Data
+```{r}
+df <-(diamonds)
+head(df)
+colnames(df)
+```
+
+#Split data
+
+##Now we will split the data 80/20. Into train and test data.
+
+```{r}
+set.seed(1234)
+cut<- sample(1:nrow(df), nrow(df)*0.2, replace= FALSE)
+smaller <- df[cut,]
+i <- sample(1:nrow(smaller), nrow(smaller)*0.8, replace=FALSE)
+train <- smaller[i,]
+test <- smaller[-i,]
+```
+
+#Regression
+
+##Performing SVM Regression:
+```{r}
+svmRegression <- svm(price~carat+depth+table+x+y+z, data=train)
+svmRegression
+```
+
+```{r}
+trainsmall<-head(train, 2000)
+testsmall<-head(test,500)
+svm1<-svm(price~., data=trainsmall, kernel="linear", cost=10, scale=TRUE)
+summary(svm1)
+```
+##Linear Kernels
+```{r}
+svmLinear = tune(svm, price~carat+depth+table+x+y+z, data=trainsmall, kernel="linear", ranges= list(cost=c(0.1,1,10,100)))
+summary(svmLinear)
+```
+
+##Polynomial Kernels
+```{r}
+svmPolynomial = tune(e1071::svm,price~carat+depth+table+x+y+z, data=train, kernel="polynomial", ranges=list(cost=c(0.1,1,10,100)))
+summary(svmPolynomial)
+```
+
+##Radial Kernels
+```{r}
+svmRadial = tune(svm,price~carat+depth+table+x+y+z, data=train, kernel="radial", ranges=list(cost=c(0.1,1,10,100)))
+summary(svmRadial)
+```
+
+
