@@ -40,7 +40,13 @@ For this assignment I used Datasets off of Kaggle.
 
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/139953259222ee2639c03d8ea0b99a9f2852aa3a/SearchingForSimiliarity/Searching%20for%20Similarity_NarrativeDoc%20(2).pdf) to Narrative Document.
 
+## Kernel and Ensemble Methods
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/tree/main/kernel_ensemble_methods) to assignment.
+
 
 ## Chapter 5 Presentation
 
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/d72ecf23fbd015d08ed5d9c048ee6e4a33f7067e/Chapter%205%20Presentation) to Presenation file.
+
+
