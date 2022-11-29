@@ -43,6 +43,7 @@ For this assignment I used Datasets off of Kaggle.
 ## Kernel and Ensemble Methods
 
 [Link](https://github.com/rpatangay00/MachineLearningClass/tree/main/kernel_ensemble_methods) to assignment.
+
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/a6a9d6ab571b7477ce02d293a7186523a8f47c61/kernel_ensemble_methods/Narrative%20Document_KernelandEnsembleMethods.pdf) to Narrative Document.
 
 
