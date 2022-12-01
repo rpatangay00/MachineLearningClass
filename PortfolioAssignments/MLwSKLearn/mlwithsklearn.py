@@ -22,7 +22,7 @@ import pandas as pd
 df = pd.read_csv('Auto.csv')
 
 print(df.head())
-print('\nDimensions of data frame:', df.shape)
+print('\nDimensions:', df.shape)
 
 """df = df.drop(columns=['name','mpg'])
 print(df.head())
@@ -120,15 +120,15 @@ predLR = logReg.predict(X_test)
 
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-accuracyLR = accuracy_score(y_test, predLR)
-precisionLR = precision_score(y_test, predLR, average='micro')
-recallLR = recall_score(y_test, predLR, average='micro')
-f1LR = f1_score(y_test, predLR, average='micro')
+accuracyLogR = accuracy_score(y_test, predLR)
+precisionLogR = precision_score(y_test, predLR, average='micro')
+recallLogR = recall_score(y_test, predLR, average='micro')
+f1LogR = f1_score(y_test, predLR, average='micro')
 
-print('Accuracy score: ', accuracyLR)
-print('Precision score: ', precisionLR)
-print('Recall score: ', recallLR)
-print('f1 score: ', f1LR)
+print('Accuracy score: ', accuracyLogR)
+print('Precision score: ', precisionLogR)
+print('Recall score: ', recallLogR)
+print('f1 score: ', f1LogR)
 
 """**Decision Tree**
 
@@ -146,15 +146,15 @@ predDT = dTree.predict(X_test)
 
 """**Evaluate**"""
 
-accuracyDT = accuracy_score(y_test, predDT)
-precisionDT = precision_score(y_test, predDT, average='micro')
-recallDT = recall_score(y_test, predDT, average='micro')
-f1DT = f1_score(y_test, predDT, average='micro')
+accuracyDesTree = accuracy_score(y_test, predDT)
+precisionDesTree = precision_score(y_test, predDT, average='micro')
+recallDesTree = recall_score(y_test, predDT, average='micro')
+f1DesTree = f1_score(y_test, predDT, average='micro')
 
-print('Accuracy score: ', accuracyDT)
-print('Precision score: ', precisionDT)
-print('Recall score: ', recallDT)
-print('f1 score: ', f1DT)
+print('Accuracy score: ', accuracyDesTree)
+print('Precision score: ', precisionDesTree)
+print('Recall score: ', recallDesTree)
+print('f1 score: ', f1DesTree)
 
 """**Neural Network**
 
@@ -217,9 +217,9 @@ precisionNN2 = precision_score(y_test, predNN2,average='micro')
 recallNN2 = recall_score(y_test, predNN2,average='micro')
 f1NN2 = f1_score(y_test, predNN2,average='micro')
 
-print('accuracy score: ', accuracyNN2)
-print('precision score: ', precisionNN2)
-print('recall score: ', recallNN2)
+print('Accuracy score: ', accuracyNN2)
+print('Precision score: ', precisionNN2)
+print('Recall score: ', recallNN2)
 print('f1 score: ', f1NN2)
 
 confusion_matrix(y_test, predNN2)
