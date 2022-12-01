@@ -52,6 +52,6 @@ For this assignment I used Datasets off of Kaggle.
 
 ## Chapter 5 Presentation
 
-[Link](https://github.com/rpatangay00/MachineLearningClass/blob/d72ecf23fbd015d08ed5d9c048ee6e4a33f7067e/Chapter%205%20Presentation) to Presenation file.
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/8136ef783e874ff8936f996e7901401b3a05b4cc/CH5Pres/Machine%20Learning%20Presentation.pdf) to Presentation file.
 
 
