@@ -46,6 +46,9 @@ For this assignment I used Datasets off of Kaggle.
 
 [Link](https://github.com/rpatangay00/MachineLearningClass/blob/a6a9d6ab571b7477ce02d293a7186523a8f47c61/kernel_ensemble_methods/Narrative%20Document_KernelandEnsembleMethods.pdf) to Narrative Document.
 
+## ML with SKLearn
+
+[Link](https://github.com/rpatangay00/MachineLearningClass/blob/bd4d435ffdb73b2cf793948f04dc403f8fb9a7dc/MLwSKLearn/MLwithSKLearn%20(1).ipynb) to Notebook.
 
 ## Chapter 5 Presentation
 
